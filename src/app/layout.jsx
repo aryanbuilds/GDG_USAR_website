@@ -1,5 +1,5 @@
-import { Noto_Sans, Sora } from 'next/font/google';
 import "./globals.css";
+import { Sora, Noto_Sans } from 'next/font/google';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -21,10 +21,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${sora.variable} ${notoSans.variable}`}>
-      <body className={`noise-background font-noto-sans -z-10`}>
-        <main className="flex-grow">
-          {children}
-        </main>
+      <body className={`noise-background font-noto-sans`}>
+        {children}
       </body>
     </html>
   );

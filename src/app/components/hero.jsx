@@ -13,9 +13,9 @@ const Hero = () => {
             <Image
               src="/assets/svgs/Tunnel.svg"
               alt="Tunnel"
-              // priority={true}
-              // loading="eager"
-              // fetchPriority="high"
+              priority={true}
+              loading="eager"
+              fetchPriority="high"
               fill={true}
               sizes="100vw"
               quality={90}

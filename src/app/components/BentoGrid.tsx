@@ -76,7 +76,6 @@ const BentoGridItem: React.FC<{ activity: string, frame: string, imageSrc: strin
           alt={activity}
           width={240}
           height={240}
-          loading="lazy"
         />
       </div>
       <p ref={textRef} className="uppercase grid-image text-white text-4xl w-full text-center font-bold opacity-0 group-hover:opacity-100 select-none pointer-events-none">

@@ -1,20 +1,23 @@
 "use client";
-import { ABOUT_US_IMAGES as items } from "../../utils/constants";
+
 import gsap from "gsap";
 import Image from "next/image";
 import { useRef } from "react";
 
 const AboutUs = () => {
+  
   const imageRefs = useRef([]);
   const frameRefs = useRef([]);
 
   const handleMouseEnter = (index) => {
+   
     gsap.killTweensOf(imageRefs.current[index]);
     gsap.killTweensOf(frameRefs.current[index]);
 
+    
     if (frameRefs.current[index]) {
       gsap.to(frameRefs.current[index], {
-        scale: 1.1,
+        scale: 1.1, 
       });
     }
 
@@ -29,6 +32,7 @@ const AboutUs = () => {
   };
 
   const handleMouseLeave = (index) => {
+
     gsap.killTweensOf(imageRefs.current[index]);
     gsap.killTweensOf(frameRefs.current[index]);
 
@@ -44,21 +48,25 @@ const AboutUs = () => {
     if (frameRefs.current[index]) {
       gsap.to(frameRefs.current[index], {
         scale: 1,
-        rotation: 0,
+        rotation: 0, 
         duration: 0.5,
         ease: "power1.in",
       });
     }
   };
 
+  const items = [
+    { text: "Learn", image: "/assets/illustrations/bulb.svg" },
+    { text: "Connect", image: "/assets/illustrations/hashtag.png" },
+    { text: "Grow", image: "/assets/illustrations/arrow.svg" },
+  ];
+
   return (
-    <div className="relative w-full min-h-screen" id="aboutUs">
+    <div className="relative w-full min-h-screen">
       {/* About Us Heading with Down Arrow */}
       <div className="absolute top-0 left-0 w-full p-6 md:p-10">
         <div className="flex items-center justify-center space-x-4">
-          <h2 className="text-4xl md:text-6xl font-bold text-white">
-            ABOUT US
-          </h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-white">ABOUT US</h2>
           <Image
             src="/assets/svgs/down_arrow.svg"
             alt="Down Arrow"
@@ -92,7 +100,7 @@ const AboutUs = () => {
                 </p>
               </div>
               <Image
-                src="/assets/svgs/line.svg"
+                src="/assets/svgs/Line 1.svg"
                 alt="line"
                 height={10}
                 width={200}
@@ -110,13 +118,12 @@ const AboutUs = () => {
               className="relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] order-1 md:order-2"
             >
               {/* Single Color Glow Effect */}
-              <div
+              <div 
                 className="absolute inset-2 rounded-2xl z-[-2]"
                 style={{
-                  background:
-                    "radial-gradient(circle at center, rgba(251, 188, 4, 0.7) 0%, rgba(251, 188, 4, 0.3) 50%, rgba(251, 188, 4, 0) 70%)",
-                  filter: "blur(15px)",
-                  transform: "scale(1.2)",
+                  background: 'radial-gradient(circle at center, rgba(251, 188, 4, 0.7) 0%, rgba(251, 188, 4, 0.3) 50%, rgba(251, 188, 4, 0) 70%)',
+                  filter: 'blur(15px)',
+                  transform: 'scale(1.2)',
                 }}
               ></div>
 

@@ -36,7 +36,7 @@ const Belt = ({className = ''}) => {
   return (
     <div
       ref={bodyRef}
-      className={twMerge("w-full overflow-hidden py-8 mb-24", className)} // Increased height
+      className={twMerge("w-full h-full overflow-hidden py-8 mb-24", className)} // Increased height
     >
       <div 
       className="w-[250vw] h-auto -left-[50vw]"

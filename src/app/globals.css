@@ -4,22 +4,12 @@
 
 @layer base {
   html {
-    @apply bg-[#141414] scroll-smooth;
+    @apply bg-[#141414];
   }
   body {
     @apply min-h-screen w-full bg-[#141414];
   }
 }
-  /* Hide scrollbar */
-  ::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  } /* Close the ::-webkit-scrollbar selector */
-  html {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-
 
 @layer components{
   .flex-center {

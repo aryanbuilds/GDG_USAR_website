@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef} from "react";
+import { useEffect, useRef} from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
@@ -16,18 +16,14 @@ const crossData = [
 
 const Parallax = () => {
 
-    const cross1Ref = useRef(null);
-    const cross2Ref = useRef(null);
-    const cross3Ref = useRef(null);
-    const cross4Ref = useRef(null);
-    const body1Ref = useRef(null);
+    const crossRefs = {
+        cross1Ref: useRef(null),
+        cross2Ref: useRef(null),
+        cross3Ref: useRef(null),
+        cross4Ref: useRef(null),
+    };
 
-    const crossRefs = useMemo(() => ({
-        cross1Ref,
-        cross2Ref,
-        cross3Ref,
-        cross4Ref,
-    }), [cross1Ref, cross2Ref, cross3Ref, cross4Ref]);
+    const body1Ref = useRef(null);
     
     useEffect(() => {
 
