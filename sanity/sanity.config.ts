@@ -4,10 +4,10 @@ import { visionTool } from '@sanity/vision';
 import { schemaTypes } from './schemaTypes';
 
 export default defineConfig({
-  name: process.env.NEXT_PUBLIC_SANITY_NAME,
-  title: process.env.NEXT_PUBLIC_SANITY_TITLE,
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || '',
+  name: 'default',
+  title: 'gdgusarwebsite',
+  projectId:'enlu62ww',
+  dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
 
