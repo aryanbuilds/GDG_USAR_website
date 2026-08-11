@@ -1,3 +1,5 @@
+
+
 # GDG USAR Website
 
 This repository contains the source code for the Google Developer Groups (GDG) USAR website.
@@ -27,7 +29,7 @@ GDG_USAR_website/
 ### Installation Steps
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/GDG_USAR_website.git
+git clone https://github.com/aryanbuilds/GDG_USAR_website.git
 cd GDG_USAR_website
 ```
 
